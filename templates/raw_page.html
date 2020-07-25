@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CodingTA</title>
+        <style type="text/css">
+            icon {  position: absolute;
+                    width: 231px;
+                    height: 60px;
+                    left: 20px;
+                    top: -35px;}
+
+            h2 {position: absolute;
+                left: 0%;
+                right: 0%;
+                top: 0%;
+                bottom: 0%;
+
+                font-family: Lobster;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 48px;
+                line-height: 60px;
+                /* identical to box height */
+
+                /*text-align: center;*/
+
+                color: green; }
+            img {  position: absolute;
+                    width: 181px;
+                    height: 181px;
+                    left: 590px;
+                    top: 78px;}
+            .boxed {
+                border: 1px solid black; border-radius: 35px;
+                background: rgba(238, 237, 237, 0.71);
+                padding: 10px;
+                position: absolute; left: 120px;top: 78px; width: 449px; height: 617px;
+            }
+        </style>
+    </head>
+
+    <body style="position: absolute; background-size:1450px 800px ;background-image: url(/static/background.jpg) ;background-repeat: no-repeat;;">
+        <icon> <h2>CodingTA</h2> </icon>
+        <img src=" {{url_for('static', filename='icon.png') }} " alt="icon" height = "20px" />
+
+        <form action="" method="post" enctype="multipart/form-data">
+            <div align="center" style="position: absolute; left: 770px; top: 78px;">
+                <div class="layui-form-item layui-form-text">
+                    <div class="layui-input-block">
+                      <textarea id="code" name="code" required lay-verify="code" placeholder="write your code here" style="padding: 20px; width: 439px; height: 607px;background: rgba(238, 237, 237, 0.71);border-radius: 35px;" class="layui-textarea fly-editor"></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <button class="layui-btn" lay-filter="*" style="width: 150px; height: 50px; background: #EB5757; border-radius: 61px;font-family: Lobster;font-style: normal;font-weight: normal;font-size: 24px;line-height: 45px;" lay-submit>提交</button>
+                    <div id="msg"></div>
+                </div>
+            </div>
+
+            <div class="boxed">
+                 <p>{{description | safe}} </p>
+            </div>
+        </form>
+    </body>
+
+</html>
