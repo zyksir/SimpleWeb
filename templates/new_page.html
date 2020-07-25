@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
 <html lang="en">
     <head>
@@ -23,11 +22,7 @@
                 font-weight: normal;
                 font-size: 48px;
                 line-height: 60px;
-                /* identical to box height */
-
-                /*text-align: center;*/
-
-                color: green; }
+                }
             img {  position: absolute;
                     width: 181px;
                     height: 181px;
@@ -48,7 +43,7 @@
         </style>
     </head>
 
-    <body style="position: absolute; background-size:1450px 800px ;background-image: url(/static/background.jpg) ;background-repeat: no-repeat;;">
+    <body style="position: absolute; background-size:1450px 800px ;background-image: url(/static/background.jpeg) ;background-repeat: no-repeat;;">
         <icon> <h2>CodingTA</h2> </icon>
         <img src=" {{url_for('static', filename='icon.png') }} " alt="icon" height = "20px" />
         <div style="position: absolute; left: 770px; top: 78px;">
