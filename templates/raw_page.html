@@ -39,12 +39,19 @@
                 background: rgba(238, 237, 237, 0.71);
                 padding: 20px;
             }
+            .boxed_code {
+                position: absolute;
+                left: 360px;top: 78px; width: 100px; height: 50px;
+
+                background: #C4C4C4;
+                border-radius: 44px;
+            }
         </style>
     </head>
 
     <body style="position: absolute; background-size:1450px 800px ;background-image: url(/static/background.jpeg) ;background-repeat: no-repeat;;">
         <icon> <h2>CodingTA</h2> </icon>
-        <img src=" {{url_for('static', filename='icon.png') }} " alt="icon" height = "20px" />
+        <img src=" {{url_for('static', filename='icon1.png') }} " alt="icon" height = "20px" />
 
         <form action="" method="post" enctype="multipart/form-data">
             <div align="center" style="position: absolute; left: 770px; top: 78px;">
@@ -62,6 +69,10 @@
 
             <div class="boxed">
                  <p>{{description | safe}} </p>
+            </div>
+
+            <div class="boxed_code">
+                <p>code</p>
             </div>
         </form>
     </body>
