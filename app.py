@@ -42,6 +42,8 @@ def question_page():
             perf_map = debug(code)
             print("#############################")
             print(perf_map)
+            if perf_map["status"] == "fail_other":
+                perf_map["rep_code"] = "Fail to correct your code"
         return render_template('new_page.html',
                                ori_bug_code=code.replace("\n", "<br/>").replace(" ", "&nbsp;"),
                                rep_code=perf_map["rep_code"].replace("\n", "<br/>").replace(" ", "&nbsp;"))
