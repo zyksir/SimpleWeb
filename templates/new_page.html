@@ -6,9 +6,9 @@
         <title>CodingTA</title>
         <style type="text/css">
             icon {  position: absolute;
-                    width: 231px;
+                    width: 431px;
                     height: 60px;
-                    left: 20px;
+                    left: 10px;
                     top: -35px;}
 
             h2 {position: absolute;
@@ -24,10 +24,10 @@
                 line-height: 60px;
                 }
             img {  position: absolute;
-                    width: 181px;
-                    height: 181px;
-                    left: 590px;
-                    top: 78px;}
+                    width: 170px;
+                    height: 170px;
+                    left: 595px;
+                    top: 278px;}
             .boxed {
                 border: 1px solid black; border-radius: 35px;
                 background: rgba(238, 237, 237, 0.71);
@@ -40,12 +40,16 @@
                 padding: 10px;
                 width: 449px; height: 617px;
             }
-            .boxed_code {
+            .boxed_bug_code {
                 position: absolute;
-                left: 18.93%;
-                right: 18.93%;
-                top: 2.11%;
-                bottom: 88.65%;
+                left: 900px;top: 60px; width: 200px; height: 40px;
+
+                background: #C4C4C4;
+                border-radius: 44px;
+            }
+            .boxed_corr_code {
+                position: absolute;
+                left: 245px;top: 60px; width: 200px; height: 40px;
 
                 background: #C4C4C4;
                 border-radius: 44px;
@@ -54,7 +58,7 @@
     </head>
 
     <body style="position: absolute; background-size:1450px 800px ;background-image: url(/static/background.jpeg) ;background-repeat: no-repeat;;">
-        <icon> <h2>CodingTA</h2> </icon>
+        <icon> <h2>CODING&nbsp;TA</h2> </icon>
         <img src=" {{url_for('static', filename='icon1.png') }} " alt="icon" height = "20px" />
         <div style="position: absolute; left: 770px; top: 78px;">
             <div class="boxed2">
@@ -73,8 +77,20 @@
              <p>{{rep_code | safe}} </p>
         </div>
 
-        <div class="boxed_code">
-             <p>code</p>
+        <div class="boxed_corr_code">
+            <div style="font-family: 'Rounded Mplus'; font-style: normal;
+            font-weight: bold; font-size: 24px;
+            line-height: 0px;position: absolute;left: 26px; right: 4px; top: -5px; bottom: 15px;">
+                <p>correct code</p>
+            </div>
+        </div>
+
+        <div class="boxed_bug_code">
+            <div style="font-family: 'Rounded Mplus'; font-style: normal;
+            font-weight: bold; font-size: 24px;
+            line-height: 0px;position: absolute;left: 44px; right: 4px; top: -5px; bottom: 15px;">
+                <p>your code</p>
+            </div>
         </div>
 
     </body>

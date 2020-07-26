@@ -6,9 +6,9 @@
         <title>CodingTA</title>
         <style type="text/css">
             icon {  position: absolute;
-                    width: 231px;
+                    width: 431px;
                     height: 60px;
-                    left: 20px;
+                    left: 10px;
                     top: -35px;}
 
             h2 {position: absolute;
@@ -24,24 +24,26 @@
                 line-height: 60px;
                 }
             img {  position: absolute;
-                    width: 181px;
-                    height: 181px;
-                    left: 590px;
-                    top: 78px;}
+                    width: 170px;
+                    height: 170px;
+                    left: 595px;
+                    top: 278px;}
             .boxed {
                 border: 1px solid black; border-radius: 35px;
                 background: rgba(238, 237, 237, 0.71);
                 padding: 10px;
                 position: absolute; left: 120px;top: 78px; width: 449px; height: 617px;
             }
-            .title_box {
-                border: 2px solid black; border-radius: 25px;
-                background: rgba(238, 237, 237, 0.71);
-                padding: 20px;
-            }
             .boxed_code {
                 position: absolute;
-                left: 360px;top: 78px; width: 100px; height: 50px;
+                left: 950px;top: 60px; width: 100px; height: 40px;
+
+                background: #C4C4C4;
+                border-radius: 44px;
+            }
+            .boxed_desc {
+                position: absolute;
+                left: 245px;top: 60px; width: 200px; height: 40px;
 
                 background: #C4C4C4;
                 border-radius: 44px;
@@ -50,19 +52,19 @@
     </head>
 
     <body style="position: absolute; background-size:1450px 800px ;background-image: url(/static/background.jpeg) ;background-repeat: no-repeat;;">
-        <icon> <h2>CodingTA</h2> </icon>
+        <icon> <h2>CODING&nbsp;TA</h2> </icon>
         <img src=" {{url_for('static', filename='icon1.png') }} " alt="icon" height = "20px" />
 
         <form action="" method="post" enctype="multipart/form-data">
             <div align="center" style="position: absolute; left: 770px; top: 78px;">
                 <div class="layui-form-item layui-form-text">
                     <div class="layui-input-block">
-                      <textarea id="code" name="code" required lay-verify="code" placeholder="write your code here" style="padding: 20px; width: 439px; height: 607px;background: rgba(238, 237, 237, 0.71);border-radius: 35px;" class="layui-textarea fly-editor"></textarea>
+                      <textarea id="code" name="code" required lay-verify="code" placeholder="write your code here" style="padding: 30px; width: 409px; height: 577px;background: rgba(238, 237, 237, 0.71);border-radius: 35px;" class="layui-textarea fly-editor"></textarea>
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <button class="layui-btn" lay-filter="*" style="width: 150px; height: 50px; background: #EB5757; border-radius: 61px;font-family: Lobster;font-style: normal;font-weight: normal;font-size: 24px;line-height: 45px;" lay-submit>提交</button>
+                    <button class="layui-btn" lay-filter="*" style="width: 150px; height: 50px; background: #B7B4B4; border-radius: 61px;font-family: Lobster;font-style: normal;font-weight: normal;font-size: 24px;line-height: 45px;" lay-submit>提交</button>
                     <div id="msg"></div>
                 </div>
             </div>
@@ -71,8 +73,20 @@
                  <p>{{description | safe}} </p>
             </div>
 
+            <div class="boxed_desc">
+                <div style="font-family: 'Rounded Mplus'; font-style: normal;
+                font-weight: bold; font-size: 24px;
+                line-height: 0px;position: absolute;left: 34px; right: 4px; top: -3px; bottom: 15px;">
+                    <p>description</p>
+                </div>
+            </div>
+
             <div class="boxed_code">
-                <p>code</p>
+                <div style="font-family: 'Rounded Mplus'; font-style: normal;
+                font-weight: bold; font-size: 24px;
+                line-height: 0px;position: absolute;left: 22px; right: 4px; top: -3px; bottom: 15px;">
+                    <p>code</p>
+                </div>
             </div>
         </form>
     </body>

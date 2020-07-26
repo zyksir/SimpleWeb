@@ -43,7 +43,7 @@ def question_page():
             print("#############################")
             print(perf_map)
         return render_template('new_page.html',
-                               ori_bug_code=perf_map["ori_bug_code"].replace("\n", "<br/>").replace(" ", "&nbsp;"),
+                               ori_bug_code=code.replace("\n", "<br/>").replace(" ", "&nbsp;"),
                                rep_code=perf_map["rep_code"].replace("\n", "<br/>").replace(" ", "&nbsp;"))
 
     return render_template('raw_page.html', description=description.replace("\n", "<br/>"))
